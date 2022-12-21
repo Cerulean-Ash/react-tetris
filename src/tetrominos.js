@@ -56,10 +56,49 @@ export const TETROMINOS = {
     ],
     color: "227, 78, 78",
   },
+  W: {
+    shape: [
+      [0, 0, 0, 0, 0],
+      ["W", 0, 0, 0, "W"],
+      ["W", 0, "W", 0, "W"],
+      [0, "W", 0, "W", 0],
+      [0, 0, 0, 0, 0],
+    ],
+    color: "27, 78, 78",
+  },
+};
+
+export const SPTETROMINO = {
+  W: {
+    shape: [
+      [0, 0, 0, 0, 0],
+      ["W", 0, 0, 0, "W"],
+      ["W", 0, "W", 0, "W"],
+      [0, "W", 0, "W", 0],
+      [0, 0, 0, 0, 0],
+    ],
+    color: "27, 78, 78",
+  },
+  i: {
+    shape: [
+      [0, "i", 0],
+      [0, "i", 0],
+      [0, "i", 0],
+    ],
+    color: "127, 78, 78",
+  },
+  l: {
+    shape: [
+      [0, "L", 0],
+      [0, "L", 0],
+      [0, "L", "L"],
+    ],
+    color: "223, 173, 36",
+  },
 };
 
 export const randomTetromino = () => {
-  const tetrominos = "IJLOSTZ";
+  const tetrominos = "IJLOSTZW";
   const randTetromino =
     tetrominos[Math.floor(Math.random() * tetrominos.length)];
   return TETROMINOS[randTetromino];
