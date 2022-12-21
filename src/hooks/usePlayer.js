@@ -55,5 +55,19 @@ export const usePlayer = () => {
     });
   }, []);
 
-  return [player, updatePlayerPos, resetPlayer, playerRotate];
+  const resetPlayerSpecial = useCallback(() => {
+    setPlayer({
+      pos: { x: 1, y: 0 },
+      tetromino: TETROMINOS["W"].shape,
+      collided: false,
+    });
+  }, []);
+
+  return [
+    player,
+    updatePlayerPos,
+    resetPlayer,
+    playerRotate,
+    resetPlayerSpecial,
+  ];
 };
